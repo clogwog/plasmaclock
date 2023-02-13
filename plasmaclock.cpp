@@ -78,7 +78,8 @@ int main(int argc, char *argv[])
 	sec = sec + 0.001;
 	for(x=0;x<SCREEN_SIZE;x++)
 	{
-		for(y=0;y<SCREEN_SIZE;y++){
+		for(y=0;y<SCREEN_SIZE;y++)
+		{
 			dx = x + .5 * sin(sec/5.0);
 			dy = y + .5 * cos(sec/3.0);
 			dv = sin(x*10 + sec) + sin(10*(x*sin(sec/2.0) + y*cos(sec/3.0)) + sec) + sin(sqrt(100*(dx*dx + dy*dy)+1) + sec);
@@ -87,8 +88,8 @@ int main(int argc, char *argv[])
 			int b = 255 * fabs(sin( dv*pi + 4*pi/4)) 	* brightness;
 			canvas->SetPixel(x, y, r , g  , b);
 		}
-	      rgb_matrix::DrawText(canvas, font, 0,14 , offColor, strHour.c_str());
-            rgb_matrix::DrawText(canvas, font, 12, 30, offColor, strMinute.c_str());
+                rgb_matrix::DrawText(canvas, font, 0,14 , offColor, strHour.c_str());
+                rgb_matrix::DrawText(canvas, font, 12, 30, offColor, strMinute.c_str());
 	}
 
 
@@ -100,8 +101,6 @@ int main(int argc, char *argv[])
               printf("stopping now\n");
           }
       }
-//      rgb_matrix::DrawText(canvas, font, 0,14 , offColor, strHour.c_str());
-//      rgb_matrix::DrawText(canvas, font, 12, 30, offColor, strMinute.c_str());
       usleep(100000);
   }
 
