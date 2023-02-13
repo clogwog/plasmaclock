@@ -42,7 +42,6 @@ int main(int argc, char *argv[])
    }
 
 
-  //std::string font_type = "./pongnumberfont.bdf";
   std::string font_type = "./10x20.bdf";
   rgb_matrix::Font font;
   if (!font.LoadFont(font_type.c_str())) 
